@@ -1,5 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<app-orbit-list [satellites] = "sourceList"></app-orbit-list>
-<ul>
+<!-- <app-orbit-list [satellites] = "sourceList"></app-orbit-list> -->
+<app-orbit-list [satellites]="displayList"></app-orbit-list>
+<div class="search-form">
+    <input #searchTerm (keyup.enter)=search(searchTerm.value) >
+    <button (click)="search(searchTerm.value)">Search</button>
+</div>
+<!-- <ul>
     <li *ngFor = "let satellite of array">{{satellite.name}},{{satellite.type}},{{satellite.launchDate}},{{satellite.orbitType}},{{satellite.operational}}</li>
-</ul>
+</ul> -->
